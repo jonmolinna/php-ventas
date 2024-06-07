@@ -1,0 +1,12 @@
+# Denegacion de Servicio
+Options +FollowSymlinks
+RewriteEngine On
+
+# Ruta de la aplicacion
+RewriteBase /php_ventas
+
+# Condiciones para acceder
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?r=$1 [L]
