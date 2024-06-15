@@ -1,5 +1,7 @@
 <?php
 
+    require_once('./controllers/ViewController.php');
+
     class Router {
         public function __construct() {
             $_HI = false;
